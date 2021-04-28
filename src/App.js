@@ -16,7 +16,8 @@ class App extends React.Component
     
   }
 
- handerimage= event => {
+  //propriete contenant une fonction avc une var event
+  handerimage= event => {
   var link= event.target.src 
   console.log(link)
   if (link==='https://res.cloudinary.com/doratine/image/upload/v1619178408/imagereact/coeur3_ngqpqw.png'){
@@ -30,7 +31,24 @@ class App extends React.Component
   render() {
     return(
       <div className= "logement">
+    <nav className="navbar navbar-dark bg-primary">
+      <a className="navbar-brand" href="#">Recherche</a>
+          <div className="" id="navbarText">
+           <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <Link className="nav-link" to="/">ACCUEIL <span className="sr-only">(current)</span></Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/identite">FORMULAIRE</Link>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
         <h1>mes logements</h1>
+       
+        <div className="d-flex flex-wrap">
+      
         {
           //map sert a parcourir le tableau
           this.state.tableau.map((log,index)=>{
@@ -58,9 +76,6 @@ class App extends React.Component
         )
           })
         }
-        <div>
-      
-        
         </div>
       </div>
     )

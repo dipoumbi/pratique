@@ -7,7 +7,7 @@ function Main(){
     return(
         <BrowserRouter>
         <Switch>
-           <Route  path= "/listeslogements"> <App/></Route> 
+           <Route exact path= "/"> <App/></Route> 
             <Route path= "/detailslog/:id" component={Homedetails}></Route>
            <Route  path= "/identite"> <Formulaire/></Route> 
 
